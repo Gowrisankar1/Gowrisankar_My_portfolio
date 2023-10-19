@@ -1,6 +1,6 @@
 # Gowrisankar N P's Portfolio Website
 
-This is my portfolio website, showcasing my work as a frontend developer and writer.
+This is my portfolio website, showcasing my work as a frontend developer.
 
 ![Screenshot](coming soon......)
 
