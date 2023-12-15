@@ -28,4 +28,16 @@ const sentence = "Full Stack Developer";
                 });
             });
         });
+
+        //pdf
+
+        const openPdfButton = document.getElementById('openPdfButton');
+
+    openPdfButton.addEventListener('click', () => {
+      // Replace 'your-pdf-file.pdf' with the actual path or URL to your PDF file
+      const pdfUrl = 'pdf/gowrisanker.pdf';
+
+      // Open the PDF in a new tab/window
+      window.open(pdfUrl, '_blank');
+    });
         
