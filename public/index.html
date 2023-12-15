@@ -1,7 +1,88 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Portfolio website</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: transparent;
+            color: white;
+            font-family: 'sans-se';
+        }
+
+        /* Customize the black and blue theme */
+        .bg-black {
+            background-color: #ffffff;
+        }
+
+        .text-blue {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-black text-blue ">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 py-4 px-20 bg-black flex justify-between items-center">
+        <div class="text-xl font-semibold text-blue">Porfolio</div>
+        <div class="flex space-x-10">
+            <a href="#home" class="text-black hover:text-blue-500 hover: transition duration-300">Home</a>
+            <a href="#contact" class="text-black hover:text-blue-500 hover: transition duration-300">Contact</a>
+            <a href="#about" class="text-black hover:text-blue-500 hover: transition duration-300">About</a>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <div id="home" class="flex space-x-45 items-center justify-center h-screen bg-transparent text-center">
+        <div>
+            <div class="text-black text-4xl font-bold mb-4">
+                <span class=" text-blue-500">Hi, I'm</span> GOWRISANKAR N P</div>
+                <div class="text-2xl font-bold text-black">
+                    <span id="typingElement" class="inline-block overflow-hidden whitespace-nowrap border-r-2"> </span>
+                  </div>
+            
+            <!-- Button for Resume -->
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded-full focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
+                Download Resume
+            </button>
+            <!--links-->
+            <div class="flex space-x-5 my-10 justify-center">
+                <!-- GitHub icon -->
+                <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition duration-300">
+                  <img src="images/github.png" alt="GitHub" class="h-10 w-10">
+                </a>
+            
+                <!-- LinkedIn icon -->
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition duration-300">
+                  <img src="images/linkedin.png" alt="LinkedIn" class="h-10 w-10">
+                </a>
+              </div>
+            
+
+        </div>  
+          <div class="relative">
+            <img src="images/gowrisankar.jpg" alt="Your Image" class="w-96 h-96 rounded-full ring-4 ring-blue-500 p-1 ">
+            <div class="absolute inset-0 rounded-full ring-4 ring-blue-600 animate-ping "></div>
+          </div>     
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="flex items-center justify-center h-screen bg-transparent text-center">
+        <div>
+            <h2 class="text-2xl font-bold mb-4">Contact</h2>
+            <p>Your contact page content goes here.</p>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="flex items-center justify-center h-screen bg-transparent text-center">
+        <div>
+            <h2 class="text-2xl font-bold mb-4">About</h2>
+            <p>Your about page content goes here.</p>
+        </div>
+    </div>
+<script src="script.js"></script>
 </body>
 </html>
 
