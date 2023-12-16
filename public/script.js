@@ -14,6 +14,7 @@ const sentence = "Full Stack Developer";
     }
 
     typeWriter();
+    
 
     // JavaScript for smooth scrolling 
     
