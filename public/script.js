@@ -41,4 +41,24 @@ const sentence = "Full Stack Developer";
       // Open the PDF in a new tab/window
       window.open(pdfUrl, '_blank');
     });
+
+    //mail
+    function validateAndSendEmail() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+          alert('Please fill in all fields');
+          return;
+      }
+
+      // Simulate success message as sending emails directly from the client side is not secure
+      document.getElementById('successMessage').classList.remove('hidden');
+  }
+  //instgram
+  function openInstagramChat() {
+    // Direct link to Instagram's chat page
+    window.location.href = 'https://www.instagram.com/gray_wol_f?igshid=ODA1NTc5OTg5Nw==';
+}
         
