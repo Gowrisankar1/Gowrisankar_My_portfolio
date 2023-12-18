@@ -62,3 +62,8 @@ const sentence = "Full Stack Developer";
     window.location.href = 'https://www.instagram.com/gray_wol_f?igshid=ODA1NTc5OTg5Nw==';
 }
         
+  //Hamburger code.
+function Menu(e){
+    let list=document.querySelector('ul')
+    e.name === 'menu-outline' ? (e.name="close-outline",list.classList.add('top-[70px]'),list.classList.add('opacity-100')): (e.name="menu-outline",list.classList.remove('top-[70px]',list.classList.remove('opacity-100')))
+}
