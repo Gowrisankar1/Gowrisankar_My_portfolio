@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/public/style.css" rel="stylesheet">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 
 
 </head>
@@ -18,17 +18,17 @@
         <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
       </span>
     </div>
-    <ul class=" rounded-bl-2xl   px-72 md:px-0 md:ml-0 ml-20 md:flex md:items-center gap-12 z-50 md:z-auto md:static absolute bg-black w-full left-40 md:left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in-out duration-300">
-      <li class="mx-4 my-6 md:my-0  text-center  hover:scale-110"><a href="#home" class="text-white hover:text-yellow-500 duration-500 font-semibold ">Home</a></li>
-      <li class="mx-4 my-6 md:my-0  text-center  hover:scale-110"><a href="#about" class="text-white hover:text-yellow-500 duration-500 font-semibold">About</a></li>
-      <li class="mx-4 my-6 md:my-0  text-center  hover:scale-110"><a href="#contact" class="text-white hover:text-yellow-500 duration-500 font-semibold">Contact</a></li>
+    <ul class=" rounded-bl-2xl   px-72 md:px-0 md:ml-0 ml-20 md:flex md:items-center gap-12 z-50 md:z-auto md:static absolute bg-black w-full left-40 md:left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in-out duration-300 " loading="lazy">
+      <li class="mx-4 my-6 md:my-0 hover:scale-110"><a href="#home" class="text-white hover:text-yellow-500 duration-500 font-semibold ">Home</a></li>
+      <li class="mx-4 my-6 md:my-0 hover:scale-110"><a href="#about" class="text-white hover:text-yellow-500 duration-500 font-semibold">About</a></li>
+      <li class="mx-4 my-6 md:my-0 hover:scale-110"><a href="#contact" class="text-white hover:text-yellow-500 duration-500 font-semibold">Contact</a></li>
     </ul>
   </nav>
 
     <!-- Home Section -->
-    <div id="home" class="gap-20 flex flex-col-reverse md:flex-row md:space-x-65  items-center justify-center  min-h-screen bg-transparent text-center" >
+    <div id="home" class="gap-16 flex flex-col-reverse md:flex-row md:space-x-65  items-center justify-center  min-h-screen bg-transparent text-center" >
         <div>
-            <div class="text-white text-2xl font-bold  mb-4 md:text-4xl">
+            <div class="text-white text-2xl font-bold mt-10 mb-4 md:text-4xl">
                 <span class=" text-yellow-500">Hi, I'm</span> GOWRISANKAR N P</div>
                 <div class="text-xl font-bold text-yellow-500 md:text-2xl">
                     <span id="typingElement" class="inline-block overflow-hidden whitespace-nowrap "> </span>
