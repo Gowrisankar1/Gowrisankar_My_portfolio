@@ -4,36 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-   
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 
 
 </head>
-<body class="flex flex-col items-center justify-center  bg-white  font-sans bg-transparent bg-cover bg-center min-h-screen" style="background-image: url('images/background.jpg');" >
+<body class="flex flex-col  items-center justify-center  bg-white  font-sans bg-transparent bg-cover bg-center min-h-screen" style="background-image: url('images/background.jpg');" >
 
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 py-4 px-20 bg-black flex justify-between items-center">
-        <div class="text-xl font-semibold text-yellow-500">PORTFOLIO</div>
-        <div class="flex space-x-10">
-            <a href="#home" class="text-white hover:text-yellow-500 hover: transition duration-300">Home</a>
-            <a href="#about" class="text-white hover:text-yellow-500 hover: transition duration-300">About</a>
-            <a href="#contact" class="text-white hover:text-yellow-500 hover: transition duration-300">Contact</a>
-        </div>
-    </nav>
+  <nav class="fixed top-0 left-0 right-0 z-50 md:py-2 md:px-2 bg-black md:flex md:justify-between md:items-center">
+    <div class="flex justify-between items-center p-4  ">
+      <div class="text-xl font-semibold text-yellow-500">PORTFOLIO</div>
+      <span class="text-3xl cursor-pointer text-yellow-500 mx-2 md:hidden block">
+        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+      </span>
+    </div>
+    <ul class=" rounded-bl-xl px-72 md:px-0 md:ml-0 ml-20 md:flex md:items-center gap-12 z-50 md:z-auto md:static absolute bg-black w-full left-40 md:left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in-out duration-500">
+      <li class="mx-4 my-6 md:my-0  text-center hover:border-2 border-yellow-400 rounded ease-out duration-400 hover:scale-110"><a href="#home" class="text-white hover:text-yellow-500 duration-500 font-semibold ">Home</a></li>
+      <li class="mx-4 my-6 md:my-0  text-center hover:border-2 border-yellow-400 rounded ease-out duration-400 hover:scale-110"><a href="#about" class="text-white hover:text-yellow-500 duration-500 font-semibold">About</a></li>
+      <li class="mx-4 my-6 md:my-0  text-center hover:border-2 border-yellow-400 rounded ease-out duration-400 hover:scale-110"><a href="#contact" class="text-white hover:text-yellow-500 duration-500 font-semibold">Contact</a></li>
+    </ul>
+  </nav>
 
     <!-- Home Section -->
-    <div id="home" class="flex space-x-65  items-center justify-center  h-screen bg-transparent text-center" >
+    <div id="home" class="gap-20 flex flex-col-reverse md:flex-row md:space-x-65  items-center justify-center  min-h-screen bg-transparent text-center" >
         <div>
-            <div class="text-white text-4xl font-bold mb-4">
+            <div class="text-white text-2xl font-bold  mb-4 md:text-4xl">
                 <span class=" text-yellow-500">Hi, I'm</span> GOWRISANKAR N P</div>
-                <div class="text-2xl font-bold text-yellow-500">
+                <div class="text-xl font-bold text-yellow-500 md:text-2xl">
                     <span id="typingElement" class="inline-block overflow-hidden whitespace-nowrap "> </span>
                   </div>
             
             <!-- Button for Resume -->
-            <button   class="bg-white hover:bg-yellow-500 text-black font-bold py-2 px-4 mt-4 rounded-full " >
+            <button   class="bg-white hover:bg-yellow-500 text-black font-bold p-2 md:py-2 md:px-4 mt-4 rounded-full " >
             <a href="pdf/Gowrisanker.pdf" download>Download C V</a></button>
             <!--links-->
-            <div class="flex space-x-5 my-10 justify-center">
+            <div class="flex space-x-5 my-5 justify-center md:my-10">
                 <!-- GitHub icon -->
                 <a href="https://github.com/Gowrisankar1" target="_blank" rel="noopener noreferrer" class="bg-yellow-500 rounded-full hover:opacity-80 transition duration-300">
                   <img src="images/github.png" alt="GitHub" class="h-10 w-10">
@@ -47,18 +52,18 @@
             
 
         </div>  
-          <div class="relative">
-            <img src="images/gowrisanker1.jpg" alt="Your Image" class="w-96 h-96 rounded-full ring-4 ring-yellow-500 p-2 object-cover ">
+          <div class="relative ">
+            <img src="images/gowrisanker1.jpg" alt="Your Image" class=" w-80 h-80 mt-20 rounded-full ring-4 ring-yellow-500 md:p-2 md:w-96 md:h-96 md:mt-0 object-cover  ">
           </div>     
     </div>
 
     <!-- ABOUT Section -->
-    <div  id="about" class="flex items-center justify-between p-16 py-35 ">
-        <div class="w-1/2 ">
-          <img src="images/aboutpic.jpg" alt="Your Photo" class="w-4/6 rounded-full border-4 border-yellow-500 ">
+    <div  id="about" class="flex flex-col items-center justify-between p-8  md:flex-row md:p-16 md:py-35 ">
+        <div class="py-16 md:w-1/2 ">
+          <img src="images/aboutpic.jpg" alt="Your Photo" class="   md:w-4/6 rounded-full border-4 border-yellow-500 ">
         </div>
-        <div class="w-1/2 text-white " >
-          <h2 class="text-6xl font-bold mb-4 ">About Me</h2>
+        <div class="md:w-1/2 text-white w-auto " >
+          <h2 class="text-4xl font-bold mb-4 md:text-6xl ">About Me</h2>
           <p class="text-gray-800 p-2 ">
             Hello, I'm Gowrisankar N P, a recent MCA graduate with a passion for web development and gaming. My academic journey has equipped me with a strong foundation in computer science, and my enthusiasm for technology extends into the dynamic world of web development.</p> <p class="text-gray-800 p-2">Proficient in various programming languages and frameworks, I thrive on creating engaging and user-friendly websites that blend functionality with aesthetics. Beyond coding, I find joy in the immersive world of gaming, where creativity and strategy converge. As I embark on my professional journey, I am eager to contribute my skills and knowledge to the ever-evolving landscape of technology, driven by a commitment to continuous learning and innovation.
           </p>
@@ -66,9 +71,9 @@
       </div>
 
     <!-- Contact Section -->
-    <div id="contact" class="flex items-center justify-center h-screen ">
+    <div id="contact" class="flex items-center justify-center py-32 ">
       <div class="text-center">
-          <div class="bg-white p-8 rounded-lg shadow-md  w-96 mt-8">
+          <div class="bg-white md:p-8 p-5 rounded-lg shadow-md w-80 h-30 md:w-96 ">
               <h1 class="text-2xl font-bold mb-6 text-yellow-500">Contact Me</h1>
   
               <form id="contactForm">
@@ -96,7 +101,7 @@
   
               <p id="successMessage" class="mt-4 text-green-600 hidden">Message sent successfully!</p>
           </div>
-          <p class="font-bold">OR</p>
+          <p class="font-bold py-4">OR</p>
   
           <div class="mb-4 p-4">
               <button onclick="openInstagramChat()"
@@ -106,10 +111,9 @@
           </div>
       </div>
   </div>
-  <div class="bg-black w-full h-12 text-yellow-500 text-center  p-4 text-sm">
+  <div class="bg-black w-full h-16  md:h-12 text-yellow-500 text-center p-6  md:p-4 text-sm">
     Copyright © 2023 Gowrisankar.All Rights reserved.
   </div>
 <script src="script.js"></script>
 </body>
 </html>
-
