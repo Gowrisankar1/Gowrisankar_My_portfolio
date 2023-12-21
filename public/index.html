@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 
 
 </head>
-<body class="flex flex-col  items-center justify-center  bg-white  font-sans bg-transparent bg-cover bg-center min-h-screen" style="background-image: url('images/background.jpg');" >
+<body class="flex flex-col  items-center justify-center   font-sans bg-transparent bg-cover bg-center min-h-screen" style="background: linear-gradient(57deg, #ffa322 30%, #000000 30% ,#ffa322 350% )  ;" >
 
     <!-- Navbar -->
   <nav class="fixed top-0 left-0 right-0 z-50 md:py-2 md:px-2 bg-black md:flex md:justify-between md:items-center">
@@ -19,7 +19,7 @@
         <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
       </span>
     </div>
-    <ul class=" rounded-bl-2xl   px-72 md:px-0 md:ml-0 ml-20 md:flex md:items-center gap-12 z-50 md:z-auto md:static absolute bg-black w-full left-40 md:left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in-out duration-300 " loading="lazy">
+    <ul class="md:flex md:items-center gap-12 z-50 md:z-auto md:static absolute bg-black text-center w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in-out duration-500">
       <li class="mx-4 my-6 md:my-0 text-center hover:scale-110"><a href="#home" class="text-white hover:text-yellow-500 duration-500 font-semibold ">Home</a></li>
       <li class="mx-4 my-6 md:my-0 text-center hover:scale-110"><a href="#about" class="text-white hover:text-yellow-500 duration-500 font-semibold">About</a></li>
       <li class="mx-4 my-6 md:my-0 text-center hover:scale-110"><a href="#contact" class="text-white hover:text-yellow-500 duration-500 font-semibold">Contact</a></li>
@@ -54,17 +54,17 @@
 
         </div>  
           <div class="relative ">
-            <img src="images/gowrisankar.jpg" alt="Your Image" class=" w-72 h-72 mt-20 rounded-full ring-4 ring-yellow-500 md:p-2 md:w-96 md:h-96 md:mt-0 object-cover  ">
+            <img src="images/gowrisankar.jpg" alt="Your Image" class=" w-72 h-72 mt-20 rounded-full ring-4 ring-yellow-500 md:p-2 md:w-96 md:h-96 md:mt-0 object-cover   ">
           </div>     
     </div>
 
     <!-- ABOUT Section -->
-    <div  id="about" class="flex flex-col items-center justify-between p-8  md:flex-row md:p-16 md:py-35 ">
+    <div  id="about" class="flex flex-col items-center justify-between px-8   md:flex-row md:p-16 md:py-35  bg-gray-200 shadow-2xl rounded-3xl bg-transparent py-8 ">
         <div class="py-16 md:w-1/2 ">
           <img src="images/aboutpic.jpg" alt="Your Photo" class="   md:w-4/6 rounded-full border-4 border-yellow-500 ">
         </div>
-        <div class="md:w-1/2 text-white w-auto " >
-          <h2 class="text-4xl font-bold mb-4 md:text-6xl ">About Me</h2>
+        <div class="md:w-1/2  w-auto " >
+          <h2 class="text-4xl font-bold mb-4 text-yellow-500 md:text-6xl "> <span class=" text-black">About</span> Me</h2>
           <p class="text-gray-800 p-2 ">
             Hello, I'm Gowrisankar N P, a recent MCA graduate with a passion for web development and gaming. My academic journey has equipped me with a strong foundation in computer science, and my enthusiasm for technology extends into the dynamic world of web development.</p> <p class="text-gray-800 p-2">Proficient in various programming languages and frameworks, I thrive on creating engaging and user-friendly websites that blend functionality with aesthetics. Beyond coding, I find joy in the immersive world of gaming, where creativity and strategy converge. As I embark on my professional journey, I am eager to contribute my skills and knowledge to the ever-evolving landscape of technology, driven by a commitment to continuous learning and innovation.
           </p>
@@ -72,32 +72,33 @@
       </div>
 
     <!-- Contact Section -->
-    <div id="contact" class="flex items-center justify-center py-32 ">
+    <div id="contact" class="flex items-center justify-center py-24  ">
       <div class="text-center">
           <div class="bg-white md:p-8 p-5 rounded-lg shadow-md w-80 h-30 md:w-96 ">
               <h1 class="text-2xl font-bold mb-6 text-yellow-500">Contact Me</h1>
   
-              <form id="contactForm">
+              <form name="submit-to-google-sheet">
                   <div class="mb-1">
                       <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
-                      <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded-md">
+                      <input type="text" id="name" name="Name" class="w-full px-3 py-2 border rounded-md">
                   </div>
   
                   <div class="mb-4">
                       <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-                      <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-md">
+                      <input type="email" id="nmail" name="Email" class="w-full px-3 py-2 border rounded-md">
                   </div>
   
                   <div class="mb-4">
                       <label for="message" class="block text-gray-700 text-sm font-bold mb-1">Message:</label>
-                      <textarea id="message" name="message" rows="4"
+                      <textarea id="message" name="Message" rows="4"
                           class="w-full px-3 py-2 border rounded-md"></textarea>
                   </div>
   
-                  <button type="button" onclick="validateAndSendEmail()"
+                  <button name="submit" type="submit" 
                       class="bg-white text-yellow-500 px-4 py-2 rounded-md hover:bg-gray-100 ">
                       Send Email
                   </button>
+                  <span id="msg" class="bg-cyan-800  text-green-400 px-2 py-4 text-center animate-bounce font-semibold text-xl rounded-md hidden"></span>
               </form>
   
               <p id="successMessage" class="mt-4 text-green-600 hidden">Message sent successfully!</p>
@@ -106,15 +107,16 @@
   
           <div class="mb-4 p-4">
               <button onclick="openInstagramChat()"
-                  class="bg-white text-back font-bold px-4 py-2 rounded-md hover:bg-yellow-500 ring-4 ring-yellow-500 ">
+                  class="bg-white text-back font-bold px-4 py-2 rounded-md hover:bg-yellow-500 ring-4 ring-black ">
                   Open Instagram 
               </button>
           </div>
       </div>
   </div>
-  <div class="bg-black w-full h-16  md:h-12 text-yellow-500 text-center p-6  md:p-4 text-sm">
+  <div class="bg-black w-full h-16  md:h-12 text-yellow-500 text-center p-2  md:p-4 text-sm">
     Copyright © 2023 Gowrisankar.All Rights reserved.
   </div>
 <script src="script.js"></script>
+
 </body>
 </html>

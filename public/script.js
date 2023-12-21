@@ -16,49 +16,7 @@ function typeWriter() {
 
 typeWriter();
 
-// JavaScript for smooth scrolling
 
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll("nav a");
-  links.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href").substring(1);
-      const targetSection = document.getElementById(targetId);
-      targetSection.scrollIntoView({ behavior: "smooth" });
-    });
-  });
-});
-
-//pdf
-
-// Get the DOM element with the ID "openPdfButton"
-const openPdfButton = document.getElementById("openPdfButton");
-
-// Add a click event listener to the button
-openPdfButton.addEventListener("click", () => {
-  // Replace 'your-pdf-file.pdf' with the actual path or URL to your PDF file
-  const pdfUrl = "pdf/gowrisanker.pdf";
-
-  // Open the PDF in a new tab/window
-  window.open(pdfUrl, "_blank");
-});
-
-
-//mail
-function validateAndSendEmail() {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  if (!name || !email || !message) {
-    alert("Please fill in all fields");
-    return;
-  }
-
-  // Simulate success message as sending emails directly from the client side is not secure
-  document.getElementById("successMessage").classList.remove("hidden");
-}
 //instgram
 function openInstagramChat() {
   // Direct link to Instagram's chat page
@@ -79,3 +37,26 @@ function Menu(e) {
         list.classList.remove("opacity-100")
       ));
 }
+
+//form script
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxo1fitX99LZM7V27PWm37MQC22fEykt6bLsHFsGNX-lPHM1UY9CyikGj_GCfQlEal3sw/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg= document.getElementById("msg")
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+      msg.innerHTML = "Message Sent Successfully!"
+      msg.style.display="block"
+      setTimeout(function(){
+          msg.innerHTML=""
+          msg.style.display="none"
+      },2000) 
+      form.reset()
+    })
+    .catch(error => console.error('Error!', error.message))
+})
+
+
+  
