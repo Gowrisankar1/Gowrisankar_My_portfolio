@@ -16,19 +16,7 @@ function typeWriter() {
 
 typeWriter();
 
-// JavaScript for smooth scrolling
 
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll("nav a");
-  links.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href").substring(1);
-      const targetSection = document.getElementById(targetId);
-      targetSection.scrollIntoView({ behavior: "smooth" });
-    });
-  });
-});
 //instgram
 function openInstagramChat() {
   // Direct link to Instagram's chat page
